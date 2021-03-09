@@ -1,6 +1,6 @@
 # 리스트로 변환하기
 
-def isPalindrome(self, s: str)->bool:
+def isPalindrome(s: str)->bool:
     strs =[]
     for char in s:
         if char.isalnum():
@@ -12,3 +12,8 @@ def isPalindrome(self, s: str)->bool:
             return False
 
     return True
+
+
+if __name__ == "__main__" :
+     input = input("문자열을 입력하세요 :")
+     print(isPalindrome(input))
