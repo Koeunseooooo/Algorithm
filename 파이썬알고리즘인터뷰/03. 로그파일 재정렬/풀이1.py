@@ -12,8 +12,20 @@ def sortLogFile(a : list) :
     for element in a :
         if element.split()[1].isdigit():
             digits.append(element)
-        else :
+        else : # 문자로 구성된 로그
             letters.append(element)
-    
 
-    #
+    # 3번 조건은 단순 오름,내림차가 아닌 특정한 조건이다.
+    # 특정조건에 대하여 sort()의 파라미터에 원하는 정렬 조건을 key로 정의하면 됨
+    letters.sort(key=lambda x:(x.split()[1:], x.split()[0]))
+    # x.split()[1:]의 의미는 식별자를 제외한 문자들을 다 붙여서 생각했을때 정렬을 해!
+    # 모두모두 문자가 동일한 경우에는! x.split()[0] 즉, 식별자 순으로 한당
+    print(letters+digits)
+    return letters + digits # 조건 2에 맞게 문자 -> 숫자 순으로 정렬 
+
+if __name__=="__main__":
+    logs=[]
+    logs=input("로그를 여러개 입력해보세요~로그는 콤마로 구분된답니당").split(",")
+    sortLogFile(logs)
+
+    # 완-벽
