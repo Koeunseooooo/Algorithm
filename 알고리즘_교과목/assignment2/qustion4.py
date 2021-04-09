@@ -1,6 +1,7 @@
 # [Programming] Given an image represented by a 5 × 5 matrix, write a method to rotate the 
 # image by 90 degrees (clockwise). You can generate a matrix randomly.
 
+import random
 def rotate_90(m):
     n = len(m)
     ret = [[0] * n for x in range(n)]
@@ -13,9 +14,18 @@ def rotate_90(m):
 
 if __name__=='__main__':
     original = []
-    print("Input 5*5 matrix's values : ")
-    for _ in range(5):
-        original.append(list(map(int, input().split())))
+    row =[]
+    for x in range(5):
+        for y in range(5):
+            row.append(random.randint(1,25))
+        original.append(row)
+        row=[]
+
+    print("randomly generated matrix(5*5) : ")
+    for row in original:
+        print(row)
+    
+    print("\n")
     
     print("90 degrees rotated matrix : ")
     rotated = rotate_90(original)
