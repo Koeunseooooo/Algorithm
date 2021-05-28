@@ -1,5 +1,5 @@
 def memoization_fibo(n):
-    memo[0]=1
+    memo[0]=0
     memo[1]=1
 
     if n<2:
@@ -11,6 +11,6 @@ def memoization_fibo(n):
     return memo[n]
 
 if __name__ == '__main__':
-    n=int(input("숫자를 입력하세용"))
+    n=int(input("Enter the number: "))
     memo =[ 0 for i in range(n+2)]
-    print(memoization_fibo(n))
+    print(n,"th number is",memoization_fibo(n))
