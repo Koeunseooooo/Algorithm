@@ -6,27 +6,26 @@ if __name__=="__main__":
     left_pointer=0
     right_pointer=left_pointer+cont-1
     
-    branch=[]
-    
-    while(left_pointer<=len(belt)-1):
+    branch=1
+
+    while(left_pointer<=belt_num-1):
+        count=1
         temp_branch=[coupon,]
         for i in range(cont):
             if right_pointer < 0:
-                right_pointer=len(belt)-1
+                right_pointer=belt_num-1
 
-            if(right_pointer>len(belt)-1):
-                right_pointer=right_pointer%8
-
-            if belt[right_pointer] not in temp_branch:
-                temp_branch.append(belt[right_pointer])
+            if belt[right_pointer%belt_num] not in temp_branch:
+                temp_branch.append(belt[right_pointer%belt_num])
+                count+=1
 
             right_pointer-=1
 
-        branch.append(len(temp_branch))
+        branch = max(count, branch)
         left_pointer+=1
         right_pointer=left_pointer+cont-1
 
-    print(max(branch))
+    print(branch)
             
 
 
