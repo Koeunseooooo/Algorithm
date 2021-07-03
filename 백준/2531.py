@@ -7,14 +7,10 @@ if __name__=="__main__":
     right_pointer=left_pointer+cont-1
     
     branch=1
-
-    while(left_pointer<=belt_num-1):
+    for i in range(belt_num):
         count=1
         temp_branch=[coupon,]
-        for i in range(cont):
-            if right_pointer < 0:
-                right_pointer=belt_num-1
-
+        for _ in range(cont):
             if belt[right_pointer%belt_num] not in temp_branch:
                 temp_branch.append(belt[right_pointer%belt_num])
                 count+=1
