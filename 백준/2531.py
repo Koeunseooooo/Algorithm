@@ -3,6 +3,8 @@ if __name__=="__main__":
     belt=[]
     for _ in range(belt_num):
         belt.append(int(input()))
+
+        
     left_pointer=0
     right_pointer=left_pointer+cont-1
     
