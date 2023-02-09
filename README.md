@@ -5,7 +5,7 @@
 - 사용 언어 : python
 
 
-### 🔹Commit Message 컨벤션
+## 🔹Commit Message 컨벤션
 ```
 type : subject
 ```
@@ -29,7 +29,7 @@ type : subject
 
 
 
-### 🔹File Naming 컨벤션
+## 🔹File Naming 컨벤션
 ```
 [문제출처]문제번호 or 문제이름.py
 [문제출처]문제번호 or 문제이름.md
