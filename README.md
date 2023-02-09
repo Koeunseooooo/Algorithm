@@ -1,11 +1,11 @@
-## 🔥코딩 테스트 개인 스터디🔥
+# 🔥코딩 테스트 대비🔥
 - 코딩테스트 대비 문제 풀이 스터디 
 - (가능한) 매일 1문제 이상씩 풀고, 깃허브에 소스 코드 .py파일로 업로드
 - 문제를 푸는 과정에서 본인이 생각한 내용 및 코드 설명 => .md파일로 업로드
 - 사용 언어 : python
 
 
-## 🔹Commit Message 컨벤션
+## 1️⃣ commit message convention
 ```
 type : subject
 ```
@@ -29,7 +29,7 @@ type : subject
 
 
 
-## 🔹File Naming 컨벤션
+## 2️⃣ file naming convention
 ```
 문제출처/문제유형/문제번호 or 문제이름.py
 문제출처/문제유형/문제번호 or 문제이름.md
@@ -39,7 +39,7 @@ type : subject
 > ex) [백준]1117번.md
   
   
-### 🔹문제 출처
+## 3️⃣ 문제 출처
 - 백준
 - 구름 알고리즘 챌린지
 - 프로그래머스
