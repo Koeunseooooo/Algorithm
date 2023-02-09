@@ -22,10 +22,12 @@ type : subject
 - 50자 이하의 간단한 제목을 사용한다.
 
 
-> ex) sdd: [백준]1117번.py <br/>
-> ex) refactor:  완전 탐색 -> 이분 탐색 <br/>
-> ex) style:  함수명 변경 <br/>
-> ex) solve:  [백준]1117번 문제 풀이 방식 설명 완료 <br/>
+> ex) solve: 1026 보물.py <br/>
+> ex) docs: 1026 보물.md <br/>
+> ex) refactor: 완전 탐색 -> 이분 탐색 <br/>
+> ex) style: 함수명 변경 <br/>
+> ex) chore: 폴더명 변경, 폴더 이동 등 <br/>
+
 
 
 
