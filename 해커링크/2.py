@@ -22,25 +22,28 @@ case = []
 visited = [[0]*4 for i in range(4)]
 
 
+def valid(x):
+    return 0 <= x < 4
+
+
 def maxEnergy(mat):
-    min = -500
 
-    def dfs(x, y, stack, visited, energy):
-        print(x, y)
-        energy = max(min, energy-mat[x][y])
-
-        for i in range(3):
-            tmp_x = x+dx[i]
-            tmp_y = y+dy[i]
-            if tmp_x < 0 or tmp_x >= 4 or tmp_y < 0 or tmp_y >= 4:
+    # Write your code here
+    cost = -400
+    for c1 in range(4):
+        for c2 in [c1-1, c1, c1+1]:
+            if not valid(c2):
                 continue
-            dfs(tmp_x, tmp_y, stack, visited, energy)
-
-        return energy
-
-    for i in range(4):
-        dfs(0, i, [], visited, 100)
-        print("___")
+            for c3 in [c2-1, c2, c2+1]:
+                if not valid(c3):
+                    continue
+                for c4 in [c3-1, c3, c3+1]:
+                    if not valid(c4):
+                        continue
+                    cost = max(cost, 100 - mat[0][c1] - mat[1][c2] -
+                               mat[2][c3] - mat[3][c4])
+    print(cost)
+    return cost
 
 
 if __name__ == '__main__':
