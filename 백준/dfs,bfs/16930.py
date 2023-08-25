@@ -1,40 +1,39 @@
-import sys
 from collections import deque
 
-input = sys.stdin.readline
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
 
-n, m, k = map(int, input().strip().split())
+N, M, K = map(int, input().split())  # N:세로 M:가로, K: step
+D = [list(input()) for _ in range(N)]
+sx, sy, ex, ey = map(int, input().split())
+sx -= 1
+sy -= 1
+ex -= 1
+ey -= 1
+check = [[float("inf")] * M for _ in range(N)]
+q = deque()
+q.append((sx, sy))
+check[sx][sy] = 0
 
-arr = [list(input()) for _ in range(n)]
-visited = [[0] * m for _ in range(n)]  # 시간 갱신
-move = [[0] * m for _ in range(n)]  # 칸 수 맞는지 확인
-
-y_1, x_1, y_2, x_2 = map(int, input().strip().split())
-
-d = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-
-
-def bfs():
-    cnt = 1
-    q = deque()
-    move = 0
-    q.append((y_1, x_1))  # 방향이랑 칸 수 둘 다 갖고 있어야하는데...
-
-    while q:
-        y, x = q.popleft()
-        # 인덱스 맞추기 위함
-        y -= 1
-        x -= 1
-        for dy, dx in d:
-            Y = y + dy
-            X = x + dx
-            if 0 <= Y < n and 0 <= X < m and arr[Y][X] != "#" and not visited[Y][X]:
-                q.append((Y, X))
-                #
-                # 직전과 방향이 같다면 move+1, 근데 이거 하기 전에 move 범위 내인지 확인하고, 범위 바깥이면 무시(continue)
-
-                # 직전과 방향이 다르다면 move는 0으로 초기화, cnt+=1
-                visited[Y][X] = visited[y][x]
-
-
-bfs()
+while q:
+    x, y = q.popleft()
+    for i in range(4):
+        nx, ny = x + dx[i], y + dy[i]
+        nk = 1
+        while (
+            nk <= K
+            and 0 <= nx < N
+            and 0 <= ny < M
+            and D[nx][ny] != "#"
+            and check[nx][ny] > check[x][y]  # point
+        ):
+            if check[nx][ny] == float("inf"):
+                q.append((nx, ny))
+                check[nx][ny] = check[x][y] + 1
+            nx += dx[i]
+            ny += dy[i]
+            nk += 1
+if check[ex][ey] == float("inf"):
+    print(-1)
+else:
+    print(check[ex][ey])

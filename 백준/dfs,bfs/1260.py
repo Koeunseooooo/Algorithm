@@ -5,7 +5,6 @@ n, m, v = map(int, input().split())
 # m 간선의 개수
 # v 탐색을 시작할 번호
 
-# 곱하기와 for문의 차이점...
 graph = [[] for _ in range(n + 1)]
 visited_dfs = [0] * (n + 1)
 
