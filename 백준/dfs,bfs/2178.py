@@ -1,5 +1,5 @@
 # 상하좌우 1이있으면 갈 곳이 있다는 뜻이고,
-# 본인은 계속 누적해서 움직이면 됨
+# 계속 누적해서 움직이면 됨
 import sys
 from collections import deque
 

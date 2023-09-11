@@ -14,7 +14,7 @@ for i in range(n):
             break
 
         # 오른쪽으로 이동
-        if j + graph[i][j] < n:
+        if j + graph[i][j] < n:  # 범위 확인
             dp[i][j + graph[i][j]] += dp[i][j]
 
         # 아래로 이동
