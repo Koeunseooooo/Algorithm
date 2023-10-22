@@ -1,7 +1,7 @@
 # permutations
 array = [1, 2, 3]
 k = 2
-used = [False for i in range(len(array))]
+used = [False for _ in range(len(array))]
 
 
 def permutations(arr):
@@ -53,7 +53,7 @@ combination([], 0)
 print()
 
 # combination_with_replacement
-array = [1, 2, 2, 3]
+array = [1, 2, 3]
 k = 2
 used = [False for i in range(len(array))]
 
