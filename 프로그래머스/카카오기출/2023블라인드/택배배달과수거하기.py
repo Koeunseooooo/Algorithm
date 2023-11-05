@@ -31,5 +31,3 @@ def solution(cap, n, deliveries, pickups):
                 pickups[-1] -= cap - box
                 break
     return answer
-
-    return answer
