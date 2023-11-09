@@ -1,5 +1,5 @@
 # https://school.programmers.co.kr/questions/42319
-
+# https://bjwan-career.tistory.com/80
 
 import math
 
