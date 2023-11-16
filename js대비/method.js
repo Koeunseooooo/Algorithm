@@ -245,3 +245,6 @@ arr.forEach((rowArr) =>
     console.log(col);
   })
 );
+
+var arr = Array.from({ length: c }, () => new Array(r).fill(0));
+console.log(arr);
