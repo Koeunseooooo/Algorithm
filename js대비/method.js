@@ -248,3 +248,21 @@ arr.forEach((rowArr) =>
 
 var arr = Array.from({ length: c }, () => new Array(r).fill(0));
 console.log(arr);
+
+// 문자열 -> 배열
+var str = "hello";
+var arr = Array.from(str);
+console.log(arr);
+var arr = [...str];
+console.log(arr);
+
+// 비교함수 정의하여 정렬하기
+var arr = [
+  [3, 2],
+  [3, 1],
+  [1, 2],
+  [1, 4],
+  [4, 3],
+];
+arr = arr.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+console.log(arr);
