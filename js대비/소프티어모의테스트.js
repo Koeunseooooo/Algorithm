@@ -57,7 +57,7 @@ const solution = (N, data) => {
     if (!N) {
       N = +line; // +는 형변환을 바로 해주기 위함임
     } else {
-      data.push(line.split(" ").map((el) => parseInt(el, 10)));
+      data.push(Array.from(line).map((el) => parseInt(el, 10)));
       count += 1;
     }
     if (count === N) {

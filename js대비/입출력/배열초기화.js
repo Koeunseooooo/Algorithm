@@ -23,3 +23,6 @@ var arr = [...Array(5)].map((v, r) =>
   [...Array(5)].map((v, c) => 5 * r + (c + 1))
 );
 console.log(arr);
+
+console.log(!1);
+console.log(false == 0);
