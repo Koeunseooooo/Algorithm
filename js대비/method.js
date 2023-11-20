@@ -266,3 +266,7 @@ var arr = [
 ];
 arr = arr.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
 console.log(arr);
+
+// slice & length
+var arr = [2, 3, 4, 6, 8, 2];
+console.log(arr.slice(1, 5)); // 새로운 배열로 반환함

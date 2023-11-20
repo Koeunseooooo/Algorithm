@@ -17,6 +17,7 @@ console.log(arr);
 // 1. 0으로 초기화
 var arr = Array.from({ length: 5 }, () => Array(5).fill(0));
 console.log(arr);
+
 // 2. 1씩 증가
 var arr = [...Array(5)].map((v, r) =>
   [...Array(5)].map((v, c) => 5 * r + (c + 1))
