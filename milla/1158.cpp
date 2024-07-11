@@ -5,6 +5,7 @@ using namespace std;
 
 
 int main(void){
+    // 그냥 암기..
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
 
