@@ -44,7 +44,7 @@ int main(void){
                 seq.pop();
 
                 imp.push_back(imp[0]);
-                imp.erase(imp.begin() + 0 ); // 0의 의미?
+                imp.erase(imp.begin() + 0 ); 
             }
             else{
                 if(seq.front() == tar){
