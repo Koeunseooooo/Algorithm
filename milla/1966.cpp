@@ -21,7 +21,7 @@ int main(void){
         int bigger=false;
         cin >> n >> tar;
         queue<int> seq; 
-        vector<int> imp(n); // n만큼 크기 지정
+        vector<int> imp(n); // n만큼 크기 지정(중요도)
 
         for (int i=0;i<n;i++){
             cin >> imp[i];
@@ -44,7 +44,7 @@ int main(void){
                 seq.pop();
 
                 imp.push_back(imp[0]);
-                imp.erase(imp.begin() + 0 ); 
+                imp.erase(imp.begin()); 
             }
             else{
                 if(seq.front() == tar){
@@ -55,7 +55,7 @@ int main(void){
                     order++;
                     
                     seq.pop();
-                    imp.erase(imp.begin() +0);
+                    imp.erase(imp.begin());
                 }
             }
         }
