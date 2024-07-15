@@ -14,7 +14,7 @@ int main(void){
     for (int i=0; i<n;i++){
         string s;
         getline(cin,s);
-        s+=' '; // 공백을 하나 더 넣어주기
+        s+=' ';
 
         stack<char> st;
         for (int i=0;i<s.length();i++){
@@ -22,11 +22,14 @@ int main(void){
                 st.push(s[i]);
             }
             else{
+                string subStr;
                 while(!st.empty()){
-                    cout << st.top();
+                    subStr+=st.top();
+                    //cout << st.top();
                     st.pop();
                 }
-                cout << ' ';
+                subStr+=" ";
+                cout << subStr;
             }
         }
 
