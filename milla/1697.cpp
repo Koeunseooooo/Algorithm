@@ -47,34 +47,37 @@ int main(void){
     bfs(N,0);
 
 }
-// #include <iostream>
-// #include <vector>
-// #define MAX 100000
-// using namespace std;
-// int N,K;
-// int minTime=MAX; // 최솟값 업데이트
 
-// bool isValid(int x){
-//     return x>=0 && x <=MAX ? true: false;
-// }
-// void dfs(int n, int cnt){
-//     if(n==K && cnt < minTime){
-//         minTime = cnt;
-//         return;
-//     }
-//     if(cnt+1 < minTime){
-//         if (isValid(n+1)) dfs(n+1,cnt+1);
-//         if (isValid(n-1)) dfs(n-1,cnt+1);
-//         if (isValid(n<<1)) dfs(n*2,cnt+1);
-//     }
-//     // 틀린이유(시간초과) : 코너케이스 (0,10만과 같은 상황 일때) ex. N=1, K=0;
-// }
 
-// int main(void){
-//     cin >> N >> K;
-//     dfs(N,0);
-//     cout << minTime << endl;
-// }
+
+#include <iostream>
+#include <vector>
+#define MAX 100000
+using namespace std;
+int N,K;
+int minTime=MAX; // 최솟값 업데이트
+
+bool isValid(int x){
+    return x>=0 && x <=MAX ? true: false;
+}
+void dfs(int n, int cnt){
+    if(n==K && cnt < minTime){
+        minTime = cnt;
+        return;
+    }
+    if(cnt+1 < minTime){
+        if (isValid(n+1)) dfs(n+1,cnt+1);
+        if (isValid(n-1)) dfs(n-1,cnt+1);
+        if (isValid(n<<1)) dfs(n*2,cnt+1);
+    }
+    // 틀린이유(시간초과) : 코너케이스 (0,10만과 같은 상황 일때) ex. N=1, K=0;
+}
+
+int main(void){
+    cin >> N >> K;
+    dfs(N,0);
+    cout << minTime << endl;
+}
 
 
 // void dfs(int n, int cnt){
