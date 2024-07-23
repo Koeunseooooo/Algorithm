@@ -56,6 +56,7 @@ int input[10];
 int ans[10];
 bool isUsed[10];
 
+// 1 7 9 9
 void func(int L){
     if (L == M){
         for (int i=0; i<M; i++) cout << ans[i] << ' ';
