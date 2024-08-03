@@ -29,7 +29,7 @@ int main(void){
     getline(cin,str);
     //cout << MAX_INF << endl;
     int dp[MAX];
-    fill(dp, dp+N, MAX_INF);
+    fill(dp, dp+N, MAX_INF); // memset과 차이점이 뭐지?
     dp[0]=0;
     for (int i=1;i<N;i++){
         char target=str[i];
