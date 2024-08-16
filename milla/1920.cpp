@@ -1,27 +1,31 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
+
 int main(void){
-    int N;
-    cin >> N;
-    int arr[N];
-    for(int i=0;i<N;i++){
-        cin >> arr[i];
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n,m,num;
+    cin >> n;
+    vector<int> v(n);
+    for(int i=0;i<n;i++){
+        cin >> v[i];
     }
 
-    sort(arr,arr+N);
+    sort(v.begin(),v.end());
 
-    int M;
-    cin >> M;
-    int tar[M];
-    for(int i=0;i<M;i++){
-        cin >> tar[i];
+    cin >> m;
+    for(int i=0;i<m;i++){
+        cin >> num;
+        if(binary_search(v.begin(),v.end(), num)){
+            cout << "1" << "\n";
+            // 문제는 endl; 이었다..? endl로 flush 발생 ?
+        }
+        else{
+            cout << "0" << "\n";
+        }
     }
-    
-    for(int i=0;i<M;i++){
-        int result = binary_search(arr,arr+N,tar[i]);
-        cout << result << endl;
-    }
+    return 0;
 }
