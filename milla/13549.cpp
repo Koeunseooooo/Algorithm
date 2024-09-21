@@ -13,6 +13,7 @@ using namespace std;
  
 int N, K;
 int visited[MAX_SIZE];
+
  
 int bfs() {
     deque<int> dq;
