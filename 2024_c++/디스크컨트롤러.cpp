@@ -6,19 +6,6 @@
 
 using namespace std;
 
-
-struct cmp {
-    bool operator()(const pair<int,int> &a, const pair<int,int> &b){
-        return a.second > b.second; // 오름차순(우선순위힙은 swap을 기준으로 비교하는 구문이기에 부등호 주의해야 함)
-    }
-};
-
-struct cmp{
-    bool operater()(const pair<int,int> &a, const pair<int,int> &b){
-        return a.second < b.second; // 오름차순
-    }
-}
-
 int solution(vector<vector<int>> jobs) {
     int answer = 0;
     
